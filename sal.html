@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+	 <title>Meble do Salonu</title>
+	 <style>
+       .header {
+            background-color: #172838;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .container-fluid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+        .logo {
+            height: 70px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content, .popup-content {
+            background-color: #000;
+            z-index: 9999;
+            color: #FFFFFF;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+			.popup-content-text {
+				color: #FFFFFF
+			}
+
+        .close {
+            color: #FFFFFF;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        main {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav class="container-fluid">
+            <img src="LOGO.png" alt="Logo Sklepu Meblowego" class="logo">
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="kontakt.html" class="active" role="button">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="container">
+        <div class="grid">
+            <section>
+              <div style="padding-top: 35px">
+                <hgroup>
+                    <h2>Meble do Salonu</h2>
+                    <h3>Odkryj naszą ofertę inspirujących mebli salonowych</h3>
+                </hgroup>
+                <h3>Fotele</h3>
+                <div class="grid">
+                    <figure>
+                        <img src="photo/items/3/1/1 bk.jpg" alt="fotel1" />
+                    </figure>
+                    <figure>
+                        <img src="photo/items/3/1/1 br.jpg" alt="fotel2" />
+                    </figure>
+                    <figure>
+                        <img src="photo/items/3/1/1 gr.jpg" alt="fotel3" />
+                    </figure>
+                </div>
+                <div class="grid">
+                    <figure>
+                        <img src="photo/items/3/1/2 bk.jpg" alt="fotel4" />
+                    </figure>
+                    <figure>
+                        <img src="photo/items/3/1/2 br.jpg" alt="fotel5" />
+                    </figure>
+                    <figure>
+                        <img src="photo/items/3/1/2 gr.jpg" alt="fotel6" />
+                    </figure>
+                </div>
+                <h3>Komody pod telewizory</h3>
+                <div class="grid">
+                     <figure>
+                        <img src="photo/items/3/2/1 bk.jpg" alt="tv1" />
+                    </figure>
+                    <figure>
+                        <img src="photo/items/3/2/1 br.jpg" alt="tv2" />
+                    </figure>
+                    <figure>
+                        <img src="photo/items/3/2/1 gr.jpg" alt="tv3" />
+                    </figure>
+                </div>
+                <div class="grid">
+                    <figure>
+                        <img src="photo/items/3/2/2 bk.jpg" alt="tv4" />
+                    </figure>
+                    <figure>
+                        <img src="photo/items/3/2/2 br.jpg" alt="tv5" />
+                    </figure>
+                    <figure>
+                        <img src="photo/items/3/2/2 gr.jpg" alt="tv6" />
+                    </figure>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="container">
+        <small><a href="#" id="privacyBtn">Polityka prywatności</a> • <a href="#" id="regBtn">Regulamin</a></small>
+    </footer>
+    
+    <div id="privacyModal" class="modal">
+        <div class="popup-content">
+            <span class="close popup-content-text" onclick="document.getElementById('privacyModal').style.display='none'">&times;</span>
+            <h1 class="popup-content-text">Polityka Prywatności Sklepu Meblowego</h1>
+    
+            <h4 class="popup-content-text">§1 Informacje ogólne</h4>
+            <p class="popup-content-text">Polityka prywatności opisuje zasady przetwarzania informacji o użytkownikach, w tym danych osobowych, oraz wykorzystania plików cookies przez Sklep Meblowy XYZ.</p>
+
+            <h4 class="popup-content-text">§2 Dane osobowe</h4>
+            <p class="popup-content-text"> Sklep przetwarza dane osobowe użytkowników w celu realizacji zamówień, obsługi płatności, a także w celach marketingowych, zgodnie z obowiązującymi przepisami prawa.</p>
+
+            <h4 class="popup-content-text">§3 Pliki cookies</h4>
+            <p class="popup-content-text">Strona sklepu używa plików cookies w celu poprawienia jakości obsługi klientów, analizy ruchu na stronie oraz personalizacji treści i reklam.</p>
+
+            <h4 class="popup-content-text">§4 Bezpieczeństwo danych</h4>
+            <p class="popup-content-text">Sklep stosuje odpowiednie środki techniczne i organizacyjne w celu zapewnienia ochrony przetwarzanych danych osobowych.</p>
+
+            <h4 class="popup-content-text">§5 Prawa użytkowników</h4>
+            <p class="popup-content-text">Użytkownicy mają prawo dostępu do swoich danych, ich poprawiania, usunięcia lub ograniczenia przetwarzania, a także prawo do sprzeciwu wobec przetwarzania i prawo do przenoszenia danych.</p>
+
+            <h4 class="popup-content-text">§6 Zmiany w polityce prywatności</h4>
+            <p class="popup-content-text">Sklep zastrzega sobie prawo do wprowadzania zmian w polityce prywatności i zobowiązuje się do informowania użytkowników o tych zmianach.</p>
+        </div>
+    </div>
+    <div id="regModal" class="modal">
+        <div class="modal-content">
+            <span class="close popup-content-text" onclick="document.getElementById('regModal').style.display='none'">&times;</span>
+            <h1 class="popup-content-text">Regulamin Sklepu Meblowego</h1>
+            <h4 class="popup-content-text">§1 Postanowienia ogólne</h4>
+            <p class="popup-content-text">Niniejszy regulamin określa zasady dokonywania zakupów w sklepie meblowym XYZ.</p>
+
+            <h4 class="popup-content-text">§2 Realizacja zamówień</h4>
+            <p class="popup-content-text">Zamówienia przyjmowane są za pośrednictwem kontaktu telefonicznego lub po odwiedzeniu siedziby firmy (adres w zakladce kontakt) i realizowane są na terenie Polski. Wycena dostepna będzie po rozmowie telefonicznej lub po osobistym odwiedzeniu naszej firmy.</p>
+
+            <h4 class="popup-content-text">§3 Płatności</h4>
+            <p class="popup-content-text">Za zakupione produkty można płacić online za pośrednictwem przelewem bankowym.</p>
+
+            <h4 class="popup-content-text">§4 Dostawa</h4>
+            <p class="popup-content-text">Zamówione produkty dostarczane są do klienta za pośrednictwem firm kurierskich. Koszty dostawy pokrywa kupujący.</p>
+
+            <h4 class="popup-content-text">§5 Reklamacje i zwroty</h4>
+            <p class="popup-content-text">Klient ma prawo do reklamacji w przypadku otrzymania wadliwego produktu. Zwroty możliwe są w ciągu 14 dni od daty zakupu.</p>
+
+            <h4 class="popup-content-text">§6 Postanowienia końcowe</h4>
+            <p class="popup-content-text">Sklep zastrzega sobie prawo do wprowadzania zmian w regulaminie. Aktualna wersja regulaminu jest zawsze dostępna na stronie sklepu.</p>
+        </div>
+    </div>
+
+    <script>
+        var modalPrivacy = document.getElementById("privacyModal");
+        var modalReg = document.getElementById("regModal");
+
+        document.getElementById("privacyBtn").onclick = function() {
+            modalPrivacy.style.display = "block";
+        };
+
+        document.getElementById("regBtn").onclick = function() {
+            modalReg.style.display = "block";
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modalPrivacy) {
+                modalPrivacy.style.display = "none";
+            }
+            if (event.target == modalReg) {
+                modalReg.style.display = "none";
+            }
+        };
+
+        document.querySelectorAll('.close').forEach(function(element) {
+            element.onclick = function() {
+                this.parentElement.parentElement.style.display = 'none';
+            };
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Kontakt - Sklep Meblowy</title>
+    <style>
+       .header {
+            background-color: #172838;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .container-fluid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+        .logo {
+            height: 70px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content, .popup-content {
+            background-color: #000;
+            z-index: 9999;
+            color: #FFFFFF;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+			.popup-content-text {
+				color: #FFFFFF
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        main {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav class="container-fluid">
+            <img src="LOGO.png" alt="Logo Sklepu Meblowego" class="logo">
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="kontakt.html" class="active" role="button">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="container">
+        <div class="grid">
+            <section class="grid">
+                <div style="flex: 1; padding-right: 20px; padding-top: 35px">
+                    <h2>Skontaktuj się z nami</h2>
+                    <p>Znajdź wszystkie potrzebne informacje, aby skontaktować się z nami. Jesteśmy tutaj, aby pomóc!</p>
+                    <h3>Adres</h3>
+                    <p>ul. Wirtualna 1, 00-001 Warszawa</p>
+                    <h3>Telefon</h3>
+                    <p>+48 123 456 789</p>
+                    <h3>Email</h3>
+                    <p>kontakt@sklepmeblowy.pl</p>
+                    <h3>Godziny otwarcia</h3>
+                    <p>Poniedziałek - Piątek: 9:00 - 17:00<br>Sobota: 10:00 - 14:00</p>
+                </div>
+                <div style="flex: 1; padding-left: 20px; padding-top: 35px">
+                    <h3>Znajdź nas na mapie</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7323044816026!2d21.006724315797118!3d52.23195807975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccb6348b7e6f%3A0x6b9b0e8b3c87f89d!2sWarsaw!5e0!3m2!1sen!2spl!4v1657852691138!5m2!1sen!2spl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="container">
+    <small><a href="#" id="privacyBtn">Polityka prywatności</a> • <a href="#" id="regBtn">Regulamin</a></small>
+    </footer>
+
+    <div id="privacyModal" class="modal">
+        <div class="popup-content">
+            <span class="close popup-content-text" onclick="document.getElementById('privacyModal').style.display='none'">&times;</span>
+            <h1 class="popup-content-text">Polityka Prywatności Sklepu Meblowego</h1>
+    
+            <h4 class="popup-content-text">§1 Informacje ogólne</h4>
+            <p class="popup-content-text">Polityka prywatności opisuje zasady przetwarzania informacji o użytkownikach, w tym danych osobowych, oraz wykorzystania plików cookies przez Sklep Meblowy XYZ.</p>
+
+            <h4 class="popup-content-text">§2 Dane osobowe</h4>
+            <p class="popup-content-text"> Sklep przetwarza dane osobowe użytkowników w celu realizacji zamówień, obsługi płatności, a także w celach marketingowych, zgodnie z obowiązującymi przepisami prawa.</p>
+
+            <h4 class="popup-content-text">§3 Pliki cookies</h4>
+            <p class="popup-content-text">Strona sklepu używa plików cookies w celu poprawienia jakości obsługi klientów, analizy ruchu na stronie oraz personalizacji treści i reklam.</p>
+
+            <h4 class="popup-content-text">§4 Bezpieczeństwo danych</h4>
+            <p class="popup-content-text">Sklep stosuje odpowiednie środki techniczne i organizacyjne w celu zapewnienia ochrony przetwarzanych danych osobowych.</p>
+
+            <h4 class="popup-content-text">§5 Prawa użytkowników</h4>
+            <p class="popup-content-text">Użytkownicy mają prawo dostępu do swoich danych, ich poprawiania, usunięcia lub ograniczenia przetwarzania, a także prawo do sprzeciwu wobec przetwarzania i prawo do przenoszenia danych.</p>
+
+            <h4 class="popup-content-text">§6 Zmiany w polityce prywatności</h4>
+            <p class="popup-content-text">Sklep zastrzega sobie prawo do wprowadzania zmian w polityce prywatności i zobowiązuje się do informowania użytkowników o tych zmianach.</p>
+        </div>
+    </div>
+    <div id="regModal" class="modal">
+        <div class="modal-content">
+            <span class="close popup-content-text" onclick="document.getElementById('regModal').style.display='none'">&times;</span>
+            <h1 class="popup-content-text">Regulamin Sklepu Meblowego</h1>
+            <h4 class="popup-content-text">§1 Postanowienia ogólne</h4>
+            <p class="popup-content-text">Niniejszy regulamin określa zasady dokonywania zakupów w sklepie meblowym XYZ.</p>
+
+            <h4 class="popup-content-text">§2 Realizacja zamówień</h4>
+            <p class="popup-content-text">Zamówienia przyjmowane są za pośrednictwem kontaktu telefonicznego lub po odwiedzeniu siedziby firmy (adres w zakladce kontakt) i realizowane są na terenie Polski. Wycena dostepna będzie po rozmowie telefonicznej lub po osobistym odwiedzeniu naszej firmy.</p>
+
+            <h4 class="popup-content-text">§3 Płatności</h4>
+            <p class="popup-content-text">Za zakupione produkty można płacić online za pośrednictwem przelewem bankowym.</p>
+
+            <h4 class="popup-content-text">§4 Dostawa</h4>
+            <p class="popup-content-text">Zamówione produkty dostarczane są do klienta za pośrednictwem firm kurierskich. Koszty dostawy pokrywa kupujący.</p>
+
+            <h4 class="popup-content-text">§5 Reklamacje i zwroty</h4>
+            <p class="popup-content-text">Klient ma prawo do reklamacji w przypadku otrzymania wadliwego produktu. Zwroty możliwe są w ciągu 14 dni od daty zakupu.</p>
+
+            <h4 class="popup-content-text">§6 Postanowienia końcowe</h4>
+            <p class="popup-content-text">Sklep zastrzega sobie prawo do wprowadzania zmian w regulaminie. Aktualna wersja regulaminu jest zawsze dostępna na stronie sklepu.</p>
+        </div>
+    </div>
+
+    <script>
+        var modalPrivacy = document.getElementById("privacyModal");
+        var modalReg = document.getElementById("regModal");
+
+        document.getElementById("privacyBtn").onclick = function() {
+            modalPrivacy.style.display = "block";
+        };
+
+        document.getElementById("regBtn").onclick = function() {
+            modalReg.style.display = "block";
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modalPrivacy) {
+                modalPrivacy.style.display = "none";
+            }
+            if (event.target == modalReg) {
+                modalReg.style.display = "none";
+            }
+        };
+
+        document.querySelectorAll('.close').forEach(function(element) {
+            element.onclick = function() {
+                this.parentElement.parentElement.style.display = 'none';
+            };
+        });
+    </script>
+
+</body>
+</html>
